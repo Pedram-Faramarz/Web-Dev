@@ -8,7 +8,7 @@ A repo for my Web Development course.
 5. It is not necessary to return this assignment.
 6. Linl to your GitHub repo you have to send to your practice lesson teacher.
 
-
+```
 **GitHub repo structure (example screenshot attached):**
 Web Dev
     Lab1 (folder)
@@ -20,3 +20,4 @@ Web Dev
             html/css files
     Lab2 (folder)
     ....
+```
