@@ -9,14 +9,14 @@ A repo for my Web Development course.
 6. Linl to your GitHub repo you have to send to your practice lesson teacher.
 
 
-##GitHub repo structure (example screenshot attached):
-###Web Dev
-####Lab1 (folder)
-#####khanacademy (folder)
-######html/css files
-######udemy (folder)
-######html/css files
-####w3schools (folder)
-######html/css files
-Lab2 (folder)
-....
+**GitHub repo structure (example screenshot attached):**
+Web Dev
+    Lab1 (folder)
+        khanacademy (folder)
+            html/css files
+        udemy (folder)
+            html/css files
+        3schools (folder)
+            html/css files
+    Lab2 (folder)
+    ....
