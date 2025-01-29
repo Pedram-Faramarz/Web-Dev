@@ -1,5 +1,5 @@
 body {
-    padding:0;
+    padding-top:100px;
     margin: 0;
     background-color: #f0f2f5;
     font-family: Arial, sans-serif;
@@ -10,48 +10,49 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 60vh;
 }
 
 .title-box {
     width: 500px;
+    margin-left: -10px;
 }
 
 .title-box img {
-    width: 235px;
+    width: 300px;
     margin-bottom: -10px;
 }
 
 .title-box p {
-    color:#000 ;
-    font-size: 26px;
+    color:#1c1e21 ;
+    font-size: 28px;
     font-weight: normal;
     line-height: 32px;
 }
 
 .form-box {
-    width: 350px;
-    padding: 15px;
+    width: 400px;
+    padding: 20px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #fff;
-    margin-left: 60px;
-    box-shadow: 0px 2px 10px 1px rgba(71,71,71,0.52);
+    box-shadow: 0px 2px 4px rgba(71,71,71,0.52), 0 8px 16px rgba(0,0,0,0.1);
 }
 
 .form-box input {
     width: 100%;
     margin-bottom: 15px;
-    padding: 15px;
-    font-size: 18px;
+    padding: 14px 16px;
+    font-size: 17px;
     box-sizing: border-box;
-    border: 1px solid #eeebeb ;
-    border-radius: 5px;
+    border: 1px solid #dddfe2 ;
+    border-radius: 6px;
     outline: none;
 }
 
 .form-box input:focus {
-    box-shadow: 0px 0px 1px 1px rgb(22,111,229);
+    border-color: #1677f2;
+    box-shadow: 0px 0px 2px #e7f3ff;
 }
 
 .form-box button {
@@ -59,22 +60,22 @@ body {
     margin-bottom: 15px;
     color:#fff;
     font-size: 20px;
-    font-weight: 600px;
+    font-weight: 600;
     border-radius: 5px;
     border: none;
-    padding: 13px 0;
+    padding: 12px 0;
     cursor: pointer;
-    background-color: #166fe5;
+    background-color: #1877f2;
 }
 
 
 .form-box button:hover {
-    background:#1877f2;
+    background:#166fe5;
 
 }
 
 .form-box a {
-    color: #166fe5;
+    color: #1877f2;
     font-size: 14px;
     text-decoration: none;
     margin-top: 5px;
@@ -87,20 +88,93 @@ body {
 }
 .form-box hr {
     border: 1px solid #dadde1;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .form-box .create-btn a {
     color: #fff;
-    font-size: 16px;
+    font-size: 17px;
     text-decoration: none;
     padding: 15px 20px;
-    border-radius: 5px;
-    background-color: #36a420;
+    border-radius: 6px;
+    background-color: #42b72a;
     font-weight: 600;
     display: inline-block;
     margin-bottom: 5px;
 }
 .form-box .create-btn a:hover {
     background-color: #42b72a;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f2f5;
+    margin-top: 180px;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #65676b;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    color: #65676b;
+    font-size: 12px;
+}
+
+ 
+/*
+.create-page a {
+    color: #1877f2;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+    height: 100px;
+    top: 1000px; 
+} */
+
+/* 
+
+.create-page  {
+    color: #1c1e21;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    font-weight: bold;
+ 
+    position:static; 
+    left: 20px;
+    
+} */
+
+.create-page {
+    position: relative; /* Enables left/right positioning */
+    left: 250px; /* Moves the element 20px to the right */
+    bottom:30px;
+    color: #1c1e21;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+   
+
+
+.create-page a:hover {
+    text-decoration: underline;
 }
