@@ -1,5 +1,5 @@
 body {
-    padding-top:100px;
+    padding-top: 100px;
     margin: 0;
     background-color: #f0f2f5;
     font-family: Arial, sans-serif;
@@ -24,7 +24,7 @@ body {
 }
 
 .title-box p {
-    color:#1c1e21 ;
+    color: #1c1e21;
     font-size: 28px;
     font-weight: normal;
     line-height: 32px;
@@ -36,7 +36,7 @@ body {
     text-align: center;
     border-radius: 8px;
     background-color: #fff;
-    box-shadow: 0px 2px 4px rgba(71,71,71,0.52), 0 8px 16px rgba(0,0,0,0.1);
+    box-shadow: 0px 2px 4px rgba(71, 71, 71, 0.52), 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .form-box input {
@@ -45,7 +45,7 @@ body {
     padding: 14px 16px;
     font-size: 17px;
     box-sizing: border-box;
-    border: 1px solid #dddfe2 ;
+    border: 1px solid #dddfe2;
     border-radius: 6px;
     outline: none;
 }
@@ -58,7 +58,7 @@ body {
 .form-box button {
     width: 100%;
     margin-bottom: 15px;
-    color:#fff;
+    color: #fff;
     font-size: 20px;
     font-weight: 600;
     border-radius: 5px;
@@ -70,7 +70,7 @@ body {
 
 
 .form-box button:hover {
-    background:#166fe5;
+    background: #166fe5;
 
 }
 
@@ -86,6 +86,7 @@ body {
 .form-box a:hover {
     text-decoration: underline;
 }
+
 .form-box hr {
     border: 1px solid #dadde1;
     margin-bottom: 20px;
@@ -102,6 +103,7 @@ body {
     display: inline-block;
     margin-bottom: 5px;
 }
+
 .form-box .create-btn a:hover {
     background-color: #42b72a;
 }
@@ -133,46 +135,17 @@ footer p {
     font-size: 12px;
 }
 
- 
-/*
-.create-page a {
-    color: #1877f2;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 14px;
-    position: relative;
-    height: 100px;
-    top: 1000px; 
-} */
-
-/* 
-
-.create-page  {
-    color: #1c1e21;
-    font-size: 14px;
-    font-weight: normal;
-    text-align: center;
-    color: #666;
-    font-size: 13px;
-    font-weight: bold;
- 
-    position:static; 
-    left: 20px;
-    
-} */
-
 .create-page {
-    position: relative; /* Enables left/right positioning */
-    left: 250px; /* Moves the element 20px to the right */
-    bottom:30px;
+    position: relative;
+    /* Enables left/right positioning */
+    left: 250px;
+    /* Moves the element 20px to the right */
+    bottom: 30px;
     color: #1c1e21;
     font-size: 13px;
     font-weight: bold;
     text-align: center;
 }
-
-
-   
 
 
 .create-page a:hover {
