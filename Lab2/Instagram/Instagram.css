@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Raboto',sans-serif;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    min-height: 100vh;
+    margin: auto;
+}
+
+.form-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-div form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 3vh 2vw;
+    border: 1px solid rgba(128,128,128,0.3);
+}
+
+.form-div form .instaLogo {
+    width: 400px;
+    margin:20px 0;
+}
+.input {
+    width: 90%;
+    padding: .6rem;
+    border-radius:8px ;
+    border: 1px solid rgba(128, 128, 128, .3);
+    margin: 3pxs;
+}
+
+.login-btn {
+    width: 97%;
+    padding: .4rem;
+    font-weight: 700;
+    background-color: rgb(1,183,255);
+    border:none;
+    border-radius: 8px;
+    margin: 8px 0px;
+    color: white;
+}
+
+#or {
+    margin:20px 0;
+}
+#or:before, #or:after {
+    content:'------------------';
+    color: rgba(128, 128, 128, .7);
+    margin:0 10px;
+}
+
+.fb-login {
+    font-weight:700 ;
+    font-size: 95%;
+    color: rgb(85,0,255);
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.sign-up{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid rgba(128,128,128,.3);
+    padding: 3vh 2vw;
+    margin:10px;
+}
+
+.store {
+    padding-top: 20px;
+    padding-bottom: 20;
+}
+.get-app {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#play {
+    width: 190px;
+    
+    
+}
+#apple {
+    width: 195px;
+    border-radius: 8px ;
+}
