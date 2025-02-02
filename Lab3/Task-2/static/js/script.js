@@ -1,7 +1,6 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.querySelector(".list-container");
 
-
 function addTask(){
     if(inputBox.value.trim() === ''){
         alert('You must write something!');
@@ -16,7 +15,6 @@ function addTask(){
 
     inputBox.value = "";
     saveData();
-
 }
 
 listContainer.addEventListener('click', function(e){
@@ -29,7 +27,6 @@ listContainer.addEventListener('click', function(e){
     }
 },false);
 
-
 function saveData(){
     localStorage.setItem("data",listContainer.innerHTML)
 }
@@ -38,6 +35,11 @@ function loadData(){
     if(localStorage.getItem("data")){
         listContainer.innerHTML = localStorage.getItem("data");
     }
+}
+
+function clearAllTasks() {
+    listContainer.innerHTML = '';
+    saveData();
 }
 
 loadData();
