@@ -121,7 +121,8 @@ header ul li a:hover {
     top: 50%;
     left: 10%;
     transform: translateY(-50%);
-    color : white;
+    color : black;
+    background-color: white;
     
 }
 
