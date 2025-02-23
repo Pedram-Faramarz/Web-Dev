@@ -1,0 +1,54 @@
+/* Header Container */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Align items vertically */
+    justify-content:space-evenly; /* Space between title and navigation */
+    padding: 15px 20px;
+    background-color: #007bff; /* Primary color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Online Store Title - Positioned on the Left */
+header h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+/* Navigation Links */
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect */
+nav a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack title and nav on small screens */
+        align-items: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+}
