@@ -33,7 +33,7 @@ import { Product } from '../models/products.model';
           <p>❤️ {{ product.likes }}</p>
         </div>
         <div class="button-row">
-            <button (click)="likeProduct()">Like</button>
+            <button (click)="likeProduct()" >{{ like ? 'Unlike' : 'Like' }}</button>
             <button (click)="removeProduct()">Remove</button>
             <button (click)="share(product, 'whatsapp')">WhatsApp</button>
         </div>
@@ -46,11 +46,14 @@ import { Product } from '../models/products.model';
 export class ProductItemComponent {
   @Input() product!: Product;
   @Output() onRemove = new EventEmitter<number>();
+  like: boolean = false; 
 
   likeProduct() {
-    this.product.likes++;
+    this.like = !this.like; 
+    this.product.likes += this.like ? 1 : -1; 
   }
-
+  
+ 
   removeProduct() {
     this.onRemove.emit(this.product.id);
   }

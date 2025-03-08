@@ -14,8 +14,10 @@ import { CATEGORIES } from './data/categories';
       <a *ngFor="let category of categories" [routerLink]="['/products', category.id]">
         {{ category.name }}
       </a>
+      
     </nav>
   </header>
+
     <router-outlet></router-outlet>
   `,
   styleUrls: ['./app.component.css']

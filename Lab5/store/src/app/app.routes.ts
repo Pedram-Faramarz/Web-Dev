@@ -4,7 +4,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/products/1', pathMatch: 'full' },
-  { path: 'products/:id', component: ProductListComponent }
+  { path: 'products/:id', component: ProductListComponent },
 ];
 
 @NgModule({

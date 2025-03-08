@@ -1,0 +1,4 @@
+
+
+
+this.product = this.product.filter(p => p.id != product.id)
