@@ -1,0 +1,6 @@
+<div *ngIf="albums.length > 0">
+  <div *ngFor="let album of albums">
+    <h3>{{ album.title }}</h3>
+    <img [src]="album.thumbnailUrl" alt="{{ album.title }}">
+  </div>
+</div>

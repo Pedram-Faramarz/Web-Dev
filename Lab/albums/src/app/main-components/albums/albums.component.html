@@ -1,0 +1,16 @@
+<body>
+<section class="albums">
+  <h1>Albums List</h1>
+  <ul>
+    <li *ngFor="let album of albums()" class="album-item">
+      <div class="album-card">
+        <h3>{{ album.title }}</h3>
+        <div class="button-group">
+          <button class="details-btn" (click)="openAlbumDetails(album.id)">View Details</button>
+          <button class="delete-btn" (click)="deleteAlbum(album.id)">Delete</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+</body>
