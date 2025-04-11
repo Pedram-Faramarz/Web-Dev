@@ -1,0 +1,109 @@
+.companies-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .companies-container h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .companies-container .loading,
+  .companies-container .error-message,
+  .companies-container .no-results {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .companies-container .loading button,
+  .companies-container .error-message button,
+  .companies-container .no-results button {
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .companies-container .loading button:hover,
+  .companies-container .error-message button:hover,
+  .companies-container .no-results button:hover {
+    background-color: #2980b9;
+  }
+  
+  .companies-container .companies-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .companies-container .companies-list .company-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .companies-container .companies-list .company-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .companies-container .companies-list .company-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .companies-container .companies-list .company-card h3 a {
+    color: #2c3e50;
+    text-decoration: none;
+  }
+  
+  .companies-container .companies-list .company-card h3 a:hover {
+    color: #3498db;
+  }
+  
+  .companies-container .companies-list .company-card .location {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+  }
+  
+  .companies-container .companies-list .company-card .description {
+    color: #34495e;
+    margin-bottom: 15px;
+  }
+  
+  .companies-container .companies-list .company-card .actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .companies-container .companies-list .company-card .actions .btn {
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .companies-container .companies-list .company-card .actions .btn.btn-details {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .companies-container .companies-list .company-card .actions .btn.btn-details:hover {
+    background-color: #2980b9;
+  }
+  
+  .companies-container .companies-list .company-card .actions .btn.btn-vacancies {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  .companies-container .companies-list .company-card .actions .btn.btn-vacancies:hover {
+    background-color: #27ae60;
+  }
+  

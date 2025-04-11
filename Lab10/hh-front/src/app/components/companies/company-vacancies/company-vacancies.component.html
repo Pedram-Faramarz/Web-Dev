@@ -1,0 +1,50 @@
+<div class="company-vacancies-container">
+    <div *ngIf="loading" class="loading">
+      <p>Loading vacancies...</p>
+    </div>
+  
+    <div *ngIf="error" class="error-message">
+      <p>{{ error }}</p>
+      <div class="actions">
+        <button (click)="loadCompanyAndVacancies()" class="btn-retry">Try Again</button>
+        <button (click)="goToAllCompanies()" class="btn-back">Back to Companies</button>
+      </div>
+    </div>
+  
+    <div *ngIf="!loading && !error && company" class="content">
+      <div class="header">
+        <div class="company-info">
+          <h2>{{ company.name }} - Open Positions</h2>
+          <p class="location">{{ company.city }}</p>
+        </div>
+  
+        <div class="actions">
+          <button (click)="goToCompanyDetails()" class="btn-company">Company Details</button>
+          <button (click)="goToAllCompanies()" class="btn-back">All Companies</button>
+        </div>
+      </div>
+  
+      <div *ngIf="vacancies.length === 0" class="no-vacancies">
+        <p>This company currently has no open positions.</p>
+      </div>
+  
+      <div *ngIf="vacancies.length > 0" class="vacancies-list">
+        <div *ngFor="let vacancy of vacancies" class="vacancy-card">
+          <div class="vacancy-header">
+            <h3>{{ vacancy.name }}</h3>
+            <span class="salary">{{ vacancy.salary | currency }}</span>
+          </div>
+  
+          <p class="description">
+            {{ vacancy.description | slice:0:200 }}
+            {{ vacancy.description.length > 200 ? '...' : '' }}
+          </p>
+  
+          <div class="actions">
+            <a [routerLink]="['/vacancies', vacancy.id]" class="btn-view">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

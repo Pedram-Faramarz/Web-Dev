@@ -1,0 +1,44 @@
+<div class="top-vacancies-container">
+  <h2>Top 10 Highest Paying Jobs</h2>
+  
+  <div *ngIf="loading" class="loading">
+    <p>Loading top vacancies...</p>
+  </div>
+  
+  <div *ngIf="error" class="error-message">
+    <p>{{ error }}</p>
+    <button (click)="loadTopVacancies()">Try Again</button>
+  </div>
+  
+  <div *ngIf="!loading && !error && vacancies.length === 0" class="no-results">
+    <p>No vacancies found.</p>
+  </div>
+  
+  <div *ngIf="!loading && !error && vacancies.length > 0" class="vacancies-list">
+    <div *ngFor="let vacancy of vacancies; let i = index" class="vacancy-card">
+      <div class="rank">{{ i + 1 }}</div>
+      
+      <div class="content">
+        <div class="vacancy-header">
+          <h3><a [routerLink]="['/vacancies', vacancy.id]">{{ vacancy.name }}</a></h3>
+          <span class="salary">{{ vacancy.salary | currency }}</span>
+        </div>
+        
+        <p class="company-name" *ngIf="vacancy.company && typeof vacancy.company === 'object'">
+          <strong>Company:</strong> 
+          <a [routerLink]="['/companies', vacancy.company.id]">{{ vacancy.company.name }}</a>
+        </p>
+        
+        <p class="company-name" *ngIf="vacancy.company && typeof vacancy.company === 'number'">
+          <strong>Company ID:</strong> {{ vacancy.company }}
+        </p>
+        
+        <p class="description">{{ vacancy.description | slice:0:150 }}{{ vacancy.description.length > 150 ? '...' : '' }}</p>
+        
+        <div class="actions">
+          <a [routerLink]="['/vacancies', vacancy.id]" class="btn btn-view">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="vacancies-container">
+    <h2>All Vacancies</h2>
+    
+    <div *ngIf="loading" class="loading">
+      <p>Loading vacancies...</p>
+    </div>
+    
+    <div *ngIf="error" class="error-message">
+      <p>{{ error }}</p>
+      <button (click)="loadVacancies()">Try Again</button>
+    </div>
+    
+    <div *ngIf="!loading && !error && vacancies.length === 0" class="no-results">
+      <p>No vacancies found.</p>
+    </div>
+    
+    <div *ngIf="!loading && !error && vacancies.length > 0" class="vacancies-list">
+      <div *ngFor="let vacancy of vacancies" class="vacancy-card">
+        <div class="vacancy-header">
+          <h3><a [routerLink]="['/vacancies', vacancy.id]">{{ vacancy.name }}</a></h3>
+          <span class="salary">{{ vacancy.salary | currency }}</span>
+        </div>
+        
+        <p class="company-name" *ngIf="vacancy.company && typeof vacancy.company === 'object'">
+          <strong>Company:</strong> 
+          <a [routerLink]="['/companies', vacancy.company.id]">{{ vacancy.company.name }}</a>
+        </p>
+        
+        <p class="company-name" *ngIf="vacancy.company && typeof vacancy.company === 'number'">
+          <strong>Company ID:</strong> {{ vacancy.company }}
+        </p>
+        
+        <p class="description">{{ vacancy.description | slice:0:200 }}{{ vacancy.description.length > 200 ? '...' : '' }}</p>
+        
+        <div class="actions">
+          <a [routerLink]="['/vacancies', vacancy.id]" class="btn btn-view">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

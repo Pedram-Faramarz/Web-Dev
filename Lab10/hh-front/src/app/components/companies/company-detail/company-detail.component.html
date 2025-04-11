@@ -1,0 +1,42 @@
+<div class="company-detail-container">
+    <div *ngIf="loading" class="loading">
+      <p>Loading company details...</p>
+    </div>
+    
+    <div *ngIf="error" class="error-message">
+      <p>{{ error }}</p>
+      <div class="actions">
+        <button (click)="loadCompany()" class="btn-retry">Try Again</button>
+        <button (click)="goBack()" class="btn-back">Back to Companies</button>
+      </div>
+    </div>
+    
+    <div *ngIf="!loading && !error && company" class="company-info">
+      <div class="header-actions">
+        <button (click)="goBack()" class="btn-back">Back to Companies</button>
+      </div>
+      
+      <h2>{{ company.name }}</h2>
+      
+      <div class="details">
+        <div class="detail-item">
+          <h3>Location</h3>
+          <p>{{ company.city }}</p>
+        </div>
+        
+        <div class="detail-item">
+          <h3>Address</h3>
+          <p>{{ company.address }}</p>
+        </div>
+      </div>
+      
+      <div class="description">
+        <h3>About</h3>
+        <p>{{ company.description }}</p>
+      </div>
+      
+      <div class="actions">
+        <button (click)="viewVacancies()" class="btn-vacancies">View Open Positions</button>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,32 @@
+<div class = "companies-container">
+    <h2>Companies</h2>
+
+    <div *ngIf="loading" class="laoding">
+        <p>Loading Companies</p>
+    </div>
+
+    <div *ngIf="error" class="error-message">
+        <p>{{error}}</p>
+        <button (click)="loadCompanies()">Try Again</button>
+    </div>
+
+    <div *ngIf="!loading && !error && companies.length ===0 " class="no-result">
+        <p>No companies found.</p>
+    </div>
+
+    <div *ngIf="!loading  && companies.length > 0" class="companies-list">
+        <div *ngFor="let company of companies" class="company-card">
+          <h3><a [routerLink]="['/companies', company.id]">{{ company.name }}</a></h3>
+          <p class="location"><strong>Location:</strong> {{ company.city }}</p>
+          <p class="description">{{ company.description | slice:0:150 }}{{ company.description.length > 150 ? '...' : '' }}</p>
+          <div class="actions">
+            <a [routerLink]="['/companies', company.id]" class="btn btn-details">View Details</a>
+            <a [routerLink]="['/companies', company.id, 'vacancies']" class="btn btn-vacancies">View Vacancies</a>
+          </div>
+        </div>
+      </div>
+    
+
+
+
+</div>
